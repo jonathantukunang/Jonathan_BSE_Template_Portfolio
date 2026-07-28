@@ -47,11 +47,7 @@ For your second milestone, explain what you've worked on since your previous mil
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kWR7I4uDrG8?si=KUp_xfkqyDoa2PkN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+The overall goal of my first milestone was to fully build the robot and make it operational. When I built the robot, I first attached the 4 motors to the chassis' frame. Then I connected all 4 motors to a motor driver and 1 wheel onto each of the motors. The motor driver was then connected to an Arduino Uno each powered by a 9 volt battery. Then I connected a HC05 to the Arduino Uno through a breadboard. As I continue to work on this project, this would allow me to connect the hand module with the robot itself. A challenge I faced was being able to supply a sufficient power source. When I was trying to power the motor driver, I noticed that I didn't have a way to connect the battery to the motor driver. Because of this, I had to receive a new tool. This allowed me to make a connection between the battery and the motor driver. Another challenge I faced was keeping my materials safe. When I was attaching the HC05 to the Arduino Uno through the breadboard, the wiring on my breadboard was incorrect. This resulted in my TX pin to go through the voltage divider rather then the RX pin which needed its voltage to be decreased. This ended up frying my RX pin and requiring me to get a new HC05 with a new RX pin. To complete my project, I plan to get the HC05s communicating to each other, get the accelerometer working, and connect all the pieces together so the robot can move along with he movement of the hand.
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
