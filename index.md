@@ -31,15 +31,10 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-oUvwIYvIeA?si=aX1vO9CuitIUHga1&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+### Summary
+In my second milestone, the main thing I have accomplished is getting my accelerometer wired in and connecting my HC05 Bluetooth Modules together. Both of these are important for different reasons. The accelerometer is important because it is what is detecting movement. This can be tilt, acceleration, or vibration. In this case, I am using tilt. When the accelerometer is tilted in any direction, is sends a signal to my robot. The way it sends this signal is because of the connected HC05 Bluetooth Modules. One thing in this project that surprised is how the debugging of the code seems complicated but is a lot easier then it looks. A challenge is faced in this milestone is getting the Bluetooth Modules to connect and communicate with each other. I had this problem because I had installed the wrong file onto my Arduino IDE. So all I had to do was install the correct file. Now, I need to make the Hand Module wireless, and add some modifications.
 
 # First Milestone
 
