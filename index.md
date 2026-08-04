@@ -235,7 +235,53 @@ int getDistance() {
   return duration / 58;
 }
 ```
+### Nano Code
+```c++
 
+#include <Arduino_BMI270_BMM150.h>
+float x, y, z;
+char lastCommand = 's';
+void setup() {
+  Serial.begin(9600);
+  // HC-05
+  Serial1.begin(38400);
+  if (!IMU.begin()) {
+    Serial.println("IMU failed!");
+    while(1);
+  }
+  Serial.println("Gesture Ready");
+}
+void loop() {
+  if(IMU.accelerationAvailable()) {
+    IMU.readAcceleration(x, y, z);
+    char command = 's'
+    // Tilt forward
+    if(x < -0.6) {
+      command = 'f';
+    }
+    // Tilt backward
+    else if(x > 0.6) {
+      command = 'b';
+    }
+    // Tilt left
+    else if(y > 0.6) {
+      command = 'l';
+    }
+    // Tilt right
+    else if(y < -0.6) {
+      command = 'r';
+    }
+    // Only send when command changes
+    if(command != lastCommand) {
+      Serial1.write(command);
+      Serial.print("Sent: ");
+      Serial.println(command);
+      lastCommand = command;
+    }
+  }
+  delay(100);
+}
+```
 # Bill of Materials
 
 | **Part** | **Note** | **Price** | **Link** |
