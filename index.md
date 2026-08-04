@@ -50,15 +50,189 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
+UNO CODE
+#include <SoftwareSerial.h>
+
+SoftwareSerial BT_Serial(2, 3);
+// RX, TX
+// ==========================
+// L298N MOTOR DRIVER
+// ==========================
+#define enA 10
+#define in1 9
+#define in2 8
+#define in3 7
+#define in4 6
+#define enB 5
+// ==========================
+// HC-SR04
+// ==========================
+#define TRIG 4
+#define ECHO 11
+// ==========================
+// LIGHTS
+// ==========================
+#define BRAKE_LIGHT A1
+#define LEFT_SIGNAL A2
+#define RIGHT_SIGNAL A3
+// 10 inches ≈ 26 cm
+#define SAFE_DISTANCE 26
+char command = 's';
+int Speed = 180;
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
-  Serial.println("Hello World!");
+  BT_Serial.begin(38400);
+  // Motor pins
+  pinMode(enA, OUTPUT);
+  pinMode(enB, OUTPUT);
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  pinMode(in3, OUTPUT);
+  pinMode(in4, OUTPUT);
+  // Ultrasonic
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECHO, INPUT);
+  // Lights
+  pinMode(BRAKE_LIGHT, OUTPUT);
+  pinMode(LEFT_SIGNAL, OUTPUT);
+  pinMode(RIGHT_SIGNAL, OUTPUT);
+  stopMotor();
+  updateLights('s');
+  Serial.println("Robot Ready");
 }
-
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  // ==========================
+  // BLUETOOTH INPUT
+  // ==========================
+  if(BT_Serial.available()) {
+    char incoming = BT_Serial.read();
+    if(incoming == 'f' ||
+       incoming == 'b' ||
+       incoming == 'l' ||
+       incoming == 'r' ||
+       incoming == 's') {
+      command = incoming;
+    }
+    Serial.print("Command: ");
+    Serial.println(command);
+  }
+  // ==========================
+  // ULTRASONIC
+  // ==========================
+  int distance = getDistance();
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+  // ==========================
+  // OBSTACLE MODE
+  // ONLY BACKWARD ALLOWED
+  // ==========================
+  if(distance <= SAFE_DISTANCE && distance > 0) {
+    Serial.println("OBSTACLE - REVERSE ONLY");
+    if(command == 'l') {
+      turnLeft();
+      updateLights('l');
+    }
+    else {
+      stopMotor();
+      updateLights('s');
+    }
+    setSpeed();
+    delay(50);
+    return;
+  }
+  // ==========================
+  // NORMAL MODE
+  // ==========================
+  switch(command) {
+    case 'f':
+      forward();
+      break;
+    case 'b':
+      backward();
+      break;
+    case 'l':
+      turnLeft();
+      break;
+    case 'r':
+      turnRight();
+      break;
+    default:
+      stopMotor();
+      break;
+  }
+  updateLights(command);
+  setSpeed();
+  delay(50);
+}
+// ==========================
+// MOTOR FUNCTIONS
+// ==========================
+void forward() {
+  digitalWrite(in1,HIGH);
+  digitalWrite(in2,LOW);
+  digitalWrite(in3,LOW);
+  digitalWrite(in4,HIGH);
+}
+void backward() {
+  digitalWrite(in1,LOW);
+  digitalWrite(in2,HIGH);
+  digitalWrite(in3,HIGH);
+  digitalWrite(in4,LOW);
+}
+void turnLeft() {
+  digitalWrite(in1,LOW);
+  digitalWrite(in2,HIGH);
+  digitalWrite(in3,LOW);
+  digitalWrite(in4,HIGH);
+}
+void turnRight() {
+  digitalWrite(in1,HIGH);
+  digitalWrite(in2,LOW);
+  digitalWrite(in3,HIGH);
+  digitalWrite(in4,LOW);
+}
+void stopMotor() {
+  digitalWrite(in1,LOW);
+  digitalWrite(in2,LOW);
+  digitalWrite(in3,LOW);
+  digitalWrite(in4,LOW);
+}
+// ==========================
+// LIGHT CONTROL
+// ==========================
+void updateLights(char movement) {
+  digitalWrite(BRAKE_LIGHT, LOW);
+  digitalWrite(LEFT_SIGNAL, LOW);
+  digitalWrite(RIGHT_SIGNAL, LOW);
+  if(movement == 'l') {
+    digitalWrite(BRAKE_LIGHT, HIGH);
+  }
+  else if(movement == 'f') {
+    digitalWrite(LEFT_SIGNAL, HIGH);
+  }
+  else if(movement == 'b') {
+    digitalWrite(RIGHT_SIGNAL, HIGH);
+  }
+}
+void setSpeed() {
+  analogWrite(enA, Speed);
+  analogWrite(enB, Speed);
+}
+// ==========================
+// HC-SR04 DISTANCE
+// ==========================
+int getDistance() {
+  digitalWrite(TRIG,LOW);
+  delayMicroseconds(5);
+  digitalWrite(TRIG,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG,LOW);
+  long duration = pulseIn(ECHO,HIGH,30000);
+  if(duration == 0) {
+    return 999;
+  }
+  return duration / 58;
 }
 ```
 
