@@ -49,7 +49,7 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 <img width="1755" height="1284" alt="Rear Lights_bb" src="https://github.com/user-attachments/assets/14aac752-ef1d-4d87-b02e-76eaac16bfbc" />
 
 ### Obstacle Avoidance Module
-<img width="2602" height="1909" alt="Avoidance Module_bb" src="https://github.com/user-attachments/assets/489bbb75-4d03-4d33-bdfc-3be515f073ba" />![Uploading Robot_bb.png…]()
+<img width="2602" height="1909" alt="Avoidance Module_bb" src="https://github.com/user-attachments/assets/489bbb75-4d03-4d33-bdfc-3be515f073ba" />
 
 # Code
 ### UNO CODE
