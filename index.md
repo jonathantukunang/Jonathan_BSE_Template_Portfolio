@@ -299,6 +299,7 @@ void loop() {
 
 # Other Resources/Examples
 
-https://www.hackster.io/embeddedlab786/hand-gesture-control-robot-via-bluetooth-94b13d
-https://docs.google.com/document/d/1EpnEPulXQwPDSK-nKLohqPjpeXNteP2G/edit
-https://www.youtube.com/watch?v=BXXAcFOTnBo
+1. https://www.hackster.io/embeddedlab786/hand-gesture-control-robot-via-bluetooth-94b13d
+2. https://docs.google.com/document/d/1EpnEPulXQwPDSK-nKLohqPjpeXNteP2G/edit
+3. https://www.youtube.com/watch?v=BXXAcFOTnBo
+4. https://docs.sunfounder.com/projects/3in1-kit-v2/en/latest/car_project/car_auto.html
