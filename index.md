@@ -35,13 +35,13 @@ The overall goal of my first milestone was to fully build the robot and make it 
 ![Robot Chassis](Robot_bb.png)
 
 ### Hand Module
-![Hand Module](Hand Module_bb.png)
+![Hand Module](Hand_Module_bb.png)
 
 ### Rear Lights
-![Rear Lights](Rear Lights_bb.png)
+![Rear Lights](Rear_Lights_bb.png)
 
 ### Obstacle Avoidance Module
-![Obstacle Avoidance Module](Avoidance Module_bb.png)
+![Obstacle Avoidance Module](Avoidance_Module_bb.png)
 
 # Code
 ### UNO CODE
