@@ -11,17 +11,10 @@ My project, the Gesture Controlled Robot, is a robot that moves from the tilt of
   
 # Final Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EGdpX2PJOz0?si=yWJao6vWz5vQ0G73" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
-
-
+### Summary
+For my final milestone, I worked on adding modifications. There are 2 modifications. I have an obstacle avoidance module and rear lights. The way these work is the obstacle avoidance module uses an ultrasonic sensor and 2 ir sensors. The ultrasonic sensor acts as the main sensor. It works by sending soundwaves and seeing how long it takes for the soundwaves to be received back. Then we have the ir sensors. These act as the emergency sensor in case the ultrasonic sensor fails. During this whole project, my biggest challenge has been connecting the HC-05 bluetooth modules. This is because there are various different things needed to be formatted in a certain order and messing one up can make the whole thing not work. However, I continued to work on it and eventually got it working. I have learned persistence and become familiar with circuits and Arduinos. In the future, I hope to learn to build my own robot from scratch (Making my own pieces). I hope to use the knowledge I have gained to implement this to robotics as a field and compete on my school's robotics team.
 
 # Second Milestone
 
