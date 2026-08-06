@@ -35,13 +35,13 @@ The overall goal of my first milestone was to fully build the robot and make it 
 ![Robot Chassis](Robot_bb.png)
 
 ### Hand Module
-<img width="2380" height="872" alt="Hand Module_bb" src="https://github.com/user-attachments/assets/37d96a41-92e4-4414-b325-984e9a442ce7" />
+![Hand Module](Hand Module_bb.png)
 
 ### Rear Lights
-<img width="1755" height="1284" alt="Rear Lights_bb" src="https://github.com/user-attachments/assets/14aac752-ef1d-4d87-b02e-76eaac16bfbc" />
+![Rear Lights](Rear Lights_bb.png)
 
 ### Obstacle Avoidance Module
-<img width="2602" height="1909" alt="Avoidance Module_bb" src="https://github.com/user-attachments/assets/489bbb75-4d03-4d33-bdfc-3be515f073ba" />
+![Obstacle Avoidance Module](Avoidance Module_bb.png)
 
 # Code
 ### UNO CODE
