@@ -32,7 +32,7 @@ The overall goal of my first milestone was to fully build the robot and make it 
 
 # Schematics 
 ### Robot Chassis
-![Headstone Image] <img width="2373" height="2723" alt="Robot_bb" src="https://github.com/user-attachments/assets/bb264075-d656-4150-94c5-904e39c66dd2" />
+<img alt="Robot_bb" src="https://github.com/user-attachments/assets/bb264075-d656-4150-94c5-904e39c66dd2" />
 
 
 ### Hand Module
