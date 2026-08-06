@@ -39,6 +39,17 @@ The overall goal of my first milestone was to fully build the robot and make it 
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+### Robot Chassis
+<img width="2373" height="2723" alt="Robot_bb" src="https://github.com/user-attachments/assets/301f9687-e700-443f-96e1-f31528a07de4" />
+
+### Hand Module
+<img width="2380" height="872" alt="Hand Module_bb" src="https://github.com/user-attachments/assets/37d96a41-92e4-4414-b325-984e9a442ce7" />
+
+### Rear Lights
+<img width="1755" height="1284" alt="Rear Lights_bb" src="https://github.com/user-attachments/assets/14aac752-ef1d-4d87-b02e-76eaac16bfbc" />
+
+### Obstacle Avoidance Module
+<img width="2602" height="1909" alt="Avoidance Module_bb" src="https://github.com/user-attachments/assets/489bbb75-4d03-4d33-bdfc-3be515f073ba" />![Uploading Robot_bb.png…]()
 
 # Code
 ### UNO CODE
