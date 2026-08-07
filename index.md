@@ -297,7 +297,7 @@ void loop() {
 | IR Obstacle Avoidance Module | Light Sensor | $5.75 | <a href="https://shillehtek.com/products/ir-infrared-obstacle-avoidance-sensor-module-for-arduino-robot?variant=51504782868767&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOoptnDFeTK4mK3JHRZr5QGDkJiLzgTyECOelhLMqFhiauJDTSrabx9Y&com_cvv=8fb3d522dc163aeadb66e08cd7450cbbdddc64c6cf2e8891f6d48747c6d56d2c"> Link </a> |
 # Other Resources/Examples
 
-1. <a href= "https://www.hackster.io/embeddedlab786/hand-gesture-control-robot-via-bluetooth-94b13d"></a>
-2. <a href= "https://docs.google.com/document/d/1EpnEPulXQwPDSK-nKLohqPjpeXNteP2G/edit"></a>
-3. <a href= "https://www.youtube.com/watch?v=BXXAcFOTnBo"></a>
-4. <a href= "https://docs.sunfounder.com/projects/3in1-kit-v2/en/latest/car_project/car_auto.html"></a>
+1. <a href= "https://www.hackster.io/embeddedlab786/hand-gesture-control-robot-via-bluetooth-94b13d">Building Instructions</a>
+2. <a href= "https://docs.google.com/document/d/1EpnEPulXQwPDSK-nKLohqPjpeXNteP2G/edit">Pairing Bluetooth Modules</a>
+3. <a href= "https://www.youtube.com/watch?v=BXXAcFOTnBo">Pairing Bluetooth Modules Video</a>
+4. <a href= "https://docs.sunfounder.com/projects/3in1-kit-v2/en/latest/car_project/car_auto.html">IR and Ultrasonic Sensor Wiring</a>
